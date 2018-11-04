@@ -19,6 +19,7 @@ public class RequestQueue {
 
     public synchronized void putRequest(Request request){
         queue.offer(request);
+        System.out.println(queue.size());
         notifyAll();
     }
 
